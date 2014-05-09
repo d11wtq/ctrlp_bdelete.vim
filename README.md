@@ -39,5 +39,5 @@ at once with a single press of <kbd>c-@</kbd>.
 
 ### TODO
 
+Fix rendering bug that causes the ctrlp pane to consume the entire window.
 Support a custom mapping instead of <kbd>c-@</kbd>.
-Maintain the selected line number in ctrlp.vim after deleting a buffer.
