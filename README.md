@@ -19,7 +19,7 @@ The easiest way to install ctrlp_bdelete.vim is using
 You'll also need to add the following line to your ~/.vimrc:
 
 ``` vim
-ctrlp_bdelete#init()
+call ctrlp_bdelete#init()
 ```
 
 This simply adds a user setting to ctrlp itself. If you are already setting
