@@ -22,7 +22,10 @@ You'll also need to add the following line to your ~/.vimrc:
 ctrlp_bdelete#init()
 ```
 
-This simply adds a user setting to ctrlp itself.
+This simply adds a user setting to ctrlp itself. If you are already setting
+`g:ctrlp_buffer_func` somewhere in your vimrc, make sure to call
+`ctrlp_bdelete#init()` after that (this plugin won't clobber it, but you may
+clobber the plugin initialization if you change `g:ctrlp_buffer_func` later).
 
 ## Usage
 
@@ -37,3 +40,4 @@ at once with a single press of <kbd>c-@</kbd>.
 ### TODO
 
 Support a custom mapping instead of <kbd>c-@</kbd>.
+Maintain the selected line number in ctrlp.vim after deleting a buffer.
