@@ -39,5 +39,6 @@ at once with a single press of <kbd>c-@</kbd>.
 
 ### TODO
 
- * Fix rendering bug that causes the ctrlp pane to consume the entire window.
+ * Fix rendering bug that causes the ctrlp pane to consume the entire window in
+   some cases (sporadic).
  * Support a custom mapping instead of <kbd>c-@</kbd>.
