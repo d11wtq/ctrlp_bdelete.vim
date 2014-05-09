@@ -20,7 +20,7 @@ function! ctrlp_bdelete#init()
   endif
 
   " don't clobbber any existing user setting
-  if exists("g:ctrlp_buffer_func['enter']")
+  if has_key(g:ctrlp_buffer_func, 'enter')
     let s:ctrlp_bdelete_user_func = g:ctrlp_buffer_func['enter']
   endif
 
@@ -28,9 +28,10 @@ function! ctrlp_bdelete#init()
 endfunction
 
 " Buffer function used in the ctrlp settings (applies mappings).
-function! ctrlp_bdelete#mappings()
+function! ctrlp_bdelete#mappings(...)
+  " call the original user setting, if set
   if exists('s:ctrlp_bdelete_user_func')
-    call <sid>ctrlp_bdelete_user_func()
+    call call(s:ctrlp_bdelete_user_func, a:000)
   endif
 
   nnoremap <buffer> <silent> <c-@> :call <sid>DeleteMarkedBuffers()<cr>
