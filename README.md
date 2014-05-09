@@ -28,7 +28,8 @@ This simply adds a user setting to ctrlp itself.
 
 Open ctrlp in buffer mode (<kbd>c-p</kbd> <kbd>c-b</kbd>), filter as needed,
 navigate to a buffer you wish to close and press <kbd>c-@</kbd>
-(<kbd>c-shift-2</kbd>). The buffer will be deleted and disappear from the list.
+(<kbd>c-shift-2</kbd>). The buffer will be deleted and will disappear from the
+list.
 
 You may also mark multiple buffers with <kbd>c-z</kbd> and then close them all
 at once with a single press of <kbd>c-@</kbd>.
