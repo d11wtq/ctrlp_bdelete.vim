@@ -42,3 +42,4 @@ at once with a single press of <kbd>c-@</kbd>.
  * Fix rendering bug that causes the ctrlp pane to consume the entire window in
    some cases (sporadic).
  * Support a custom mapping instead of <kbd>c-@</kbd>.
+ * Write documentation for Vim
