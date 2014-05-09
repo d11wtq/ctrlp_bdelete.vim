@@ -38,6 +38,10 @@ function! ctrlp_bdelete#mappings(...)
 endfunction
 
 function! s:DeleteMarkedBuffers()
+  " get the line number to preserve position
+  let currln = line('.')
+  let lastln = line('$')
+
   " list all marked buffers
   let marked = ctrlp#getmarkedlist()
 
@@ -54,5 +58,10 @@ function! s:DeleteMarkedBuffers()
   endfor
 
   " refresh ctrlp
-  exec "normal \<F5>"
+  exec "normal \<f5>"
+
+  " preserve line selection
+  if line('.') == currln && line('$') < lastln
+    exec "normal \<up>"
+  endif
 endfunction
