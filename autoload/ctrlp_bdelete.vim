@@ -21,7 +21,9 @@ function! ctrlp_bdelete#init()
 
   " don't clobbber any existing user setting
   if has_key(g:ctrlp_buffer_func, 'enter')
-    let s:ctrlp_bdelete_user_func = g:ctrlp_buffer_func['enter']
+    if g:ctrlp_buffer_func['enter'] != 'ctrlp_bdelete#mappings'
+      let s:ctrlp_bdelete_user_func = g:ctrlp_buffer_func['enter']
+    endif
   endif
 
   let g:ctrlp_buffer_func['enter'] = 'ctrlp_bdelete#mappings'
