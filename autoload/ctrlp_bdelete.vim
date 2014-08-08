@@ -62,6 +62,9 @@ function! s:DeleteMarkedBuffers()
   " refresh ctrlp
   exec "normal \<f5>"
 
+  " unmark buffers that have been deleted
+  silent! call ctrlp#clearmarkedlist()
+
   " preserve line selection
   if line('.') == currln && line('$') < lastln
     exec "normal \<up>"
